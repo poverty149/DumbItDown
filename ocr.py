@@ -18,8 +18,8 @@ pipeline = transformers.pipeline(
     device_map="auto",
 )
 
-# client = OpenAI(api_key = "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")
-# openai.api_key = "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"
+# client = OpenAI(api_key = "")
+# openai.api_key = ""
 def read_image(path):
     im=cv2.imread(path)
     # cv2.imshow('Original', im) 
