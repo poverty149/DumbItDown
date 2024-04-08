@@ -1,0 +1,116 @@
+<!-- upload_image.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Head content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* CSS styling for the form */
+        header {
+            /* background-color: #007bff; Background color */
+            color: black; /* Text color */
+            padding: 20px; /* Padding around the header content */
+            text-align: center; /* Center align the text */
+            position: absolute;
+            top:0;
+            /* left: 0; */
+        }
+
+        /* CSS for Header Title */
+        header h1 {
+            margin: 0; /* Remove default margin */
+            font-size: 40px; /* Font size of the title */
+            font-family:'Courier New', Courier, monospace;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcd12a;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .text-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background: transparent;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 75px;
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dumb It Down</h1>
+    </header>
+    <div class="container">
+        <h2>Upload Image</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="image">Select Image:</label>
+                <input type="file" name="image" id="image" accept="image/*" required>
+            </div>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+    <footer>
+        <center><p style="color: black;font-size: 17px;font-weight: bold;">Made with <span style="color:red">&#10084;</span> by Parvathy UK</p></center>
+        <center><p style="font-size: 22px; margin-top: -5px;">
+            <a href="https://www.github.com/poverty149" target="_blank"><span style="color: black !important;" class="fa fa-github"></span></a>&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/in/parvathyuk" target="_blank" ><span style="color: black !important;" class="fa fa-linkedin"></span></a>&nbsp;&nbsp;
+        </p></center>
+    </footer>
+</body>
+</html>

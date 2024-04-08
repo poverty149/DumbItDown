@@ -1,0 +1,119 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+</head>
+<style>
+    html{
+            position: relative;
+            min-height: 100%;
+        }
+    footer {
+            background: transparent;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 75px;
+            width: 100%;
+            overflow: hidden;
+        }
+</style>
+<body>
+    <p>result</p>
+    <br><br>
+              {% block content %}
+              {% endblock %}
+          <footer>
+            <center><p style="color: black;font-size: 17px;font-weight: bold;">Made with <span style="color:red">&#10084;</span> by Parvathy UK</p></center>
+            <center><p style="font-size: 22px; margin-top: -5px;">
+                <a href="https://www.github.com/poverty149" target="_blank"><span style="color: black !important;" class="fa fa-github"></span></a>&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/parvathyuk" target="_blank" ><span style="color: black !important;" class="fa fa-linkedin"></span></a>&nbsp;&nbsp;
+            </p></center>
+        </footer>
+</body>
+</html> -->
+<!-- result.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Text Extraction Result</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+         header {
+            /* background-color: #007bff; Background color */
+            color: black; /* Text color */
+            padding: 20px; /* Padding around the header content */
+            text-align: center; /* Center align the text */
+            position: absolute;
+            top:0;
+            /* left: 0; */
+        }
+
+        /* CSS for Header Title */
+        header h1 {
+            margin: 0; /* Remove default margin */
+            font-size: 40px; /* Font size of the title */
+            font-family:'Courier New', Courier, monospace;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcd12a;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        .text-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 0 auto; 
+            text-align: center; 
+        }
+        footer {
+            background: transparent;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 75px;
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dumb It Down</h1>
+    </header>
+    <div class="result-container">
+        <h1>Extracted Text from Uploaded Image</h1>
+        <div class="text-container">
+            {{ text }}
+        </div>
+
+    </div>
+    <footer>
+        <center><p style="color: black;font-size: 17px;font-weight: bold;">Made with <span style="color:red">&#10084;</span> by Parvathy UK</p></center>
+        <center><p style="font-size: 22px; margin-top: -5px;">
+            <a href="https://www.github.com/poverty149" target="_blank"><span style="color: black !important;" class="fa fa-github"></span></a>&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/in/parvathyuk" target="_blank" ><span style="color: black !important;" class="fa fa-linkedin"></span></a>&nbsp;&nbsp;
+        </p></center>
+    </footer>
+    
+</body>
+</html>
